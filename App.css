@@ -1,0 +1,138 @@
+/* === General Layout === */
+body {
+  margin: 0;
+  font-family: "Inter", "Roboto", sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* === Navbar === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #4285f4;
+  letter-spacing: -0.5px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #dfe1e5;
+  border-radius: 50px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  width: 220px;
+  font-size: 0.95rem;
+}
+
+.search-bar button {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0 50px 50px 0;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #3367d6;
+}
+
+/* === Main Content === */
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+@media (min-width: 900px) {
+  .main-content {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+/* === Trend List === */
+.trend-list {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.trend-list h2 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #202124;
+}
+
+.trend-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.trend-list li {
+  padding: 0.6rem 0.4rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.trend-list li:hover {
+  background-color: #f1f3f4;
+  transform: translateX(4px);
+}
+
+/* === Chart Container === */
+.trend-chart {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+}
+
+.trend-chart h2 {
+  margin-bottom: 1rem;
+  color: #202124;
+}
+
+/* === Responsive Design === */
+@media (max-width: 600px) {
+  .search-bar input {
+    width: 140px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+}
